@@ -39,7 +39,7 @@ const App = () => {
   };
 
   const handlePressToolbarCamera = () => {};
-  const handlePressToolbarLocation = () => {};
+  
   const handleChangeFocus = (isFocused: boolean) => {
     setIsInputFocused(isFocused);
   };
@@ -120,10 +120,6 @@ const App = () => {
         <MessageList messages={messages} onPressMessage={handlePressMessage} />
       </View>
     );
-  };
-
-  const renderInputMethodEditor = () => {
-    return <View style={styles.inputMethodEditor}></View>;
   };
 
   const renderFullscreenImage = () => {

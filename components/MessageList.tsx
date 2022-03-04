@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+// import MapView, {Marker} from 'react-native-maps';
 
 const keyExtractor = (item: any) => item.id.toString();
 
@@ -24,15 +24,9 @@ const MessageList = ({onPressMessage, messages}: any) => {
         return <Image style={styles.image} source={{uri}} />;
       case 'location':
         return (
-          <MapView
-            style={styles.map}
-            initialRegion={{
-              ...coordinate,
-              latitudeDelta: 0.08,
-              longitudeDelta: 0.04,
-            }}>
-            <Marker coordinate={coordinate} />
-          </MapView>
+          <View style={styles.messageBubble}>
+            <Text style={styles.text}>Map</Text>
+          </View>
         );
       default:
         return null;

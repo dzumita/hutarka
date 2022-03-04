@@ -7,7 +7,7 @@ import Grid from './Grid';
 const keyExtractor = ({uri}: any) => uri;
 
 type ImageGridType = {
-  onPressImage: () => void;
+  onPressImage?: () => void;
 };
 
 const ImageGrid = ({onPressImage = () => {}}: ImageGridType) => {
